@@ -1,5 +1,5 @@
 
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 var app = (function () {
     'use strict';
 
@@ -1257,10 +1257,10 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "Volver a Jugar!";
     			attr_dev(h1, "class", "svelte-xg2ven");
-    			add_location(h1, file, 80, 2, 1642);
+    			add_location(h1, file, 80, 2, 1722);
     			attr_dev(button, "type", "button");
     			attr_dev(button, "class", "svelte-xg2ven");
-    			add_location(button, file, 81, 2, 1676);
+    			add_location(button, file, 81, 2, 1757);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -1316,10 +1316,10 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "Volver a Jugar!";
     			attr_dev(h1, "class", "svelte-xg2ven");
-    			add_location(h1, file, 77, 2, 1521);
+    			add_location(h1, file, 77, 2, 1598);
     			attr_dev(button, "type", "button");
     			attr_dev(button, "class", "svelte-xg2ven");
-    			add_location(button, file, 78, 2, 1555);
+    			add_location(button, file, 78, 2, 1633);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -1419,10 +1419,10 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "Jugar";
     			attr_dev(h1, "class", "svelte-xg2ven");
-    			add_location(h1, file, 71, 2, 1335);
+    			add_location(h1, file, 71, 2, 1406);
     			attr_dev(button, "type", "button");
     			attr_dev(button, "class", "svelte-xg2ven");
-    			add_location(button, file, 72, 2, 1356);
+    			add_location(button, file, 72, 2, 1428);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -1480,7 +1480,7 @@ var app = (function () {
     			main = element("main");
     			if_block.c();
     			attr_dev(main, "class", "svelte-xg2ven");
-    			add_location(main, file, 69, 2, 1296);
+    			add_location(main, file, 69, 2, 1365);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
