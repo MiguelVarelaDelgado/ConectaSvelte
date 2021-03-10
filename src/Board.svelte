@@ -18,15 +18,17 @@
   let player = 1;
 
   const changeBoard = (board, colIndex, newValue) => {
-    const newBoard = board.map(row => row.map(value => value));
+    let isNewBoard = false;
+    const newBoard = [...board];
     for (let ri = board.length - 1; ri >= 0; ri -= 1) {
       if (!board[ri][colIndex]) {
         newBoard[ri][colIndex] = newValue;
+        isNewBoard = true;
         break;
       }
     }
 
-    return newBoard;
+    return [newBoard, isNewBoard];
   };
 
   function isBoardFull(board) {
@@ -35,9 +37,12 @@
 
   function onPlay(colIndex) {
     console.info(`Player ${player} played at ${colIndex}`);
-    board = changeBoard(board, colIndex, player);
-    const winningPlayer = checkWin(board);
+    
+    let isNewBoard;
+    [board, isNewBoard] = changeBoard(board, colIndex, player);
+    if(!isNewBoard) return;
 
+    const winningPlayer = checkWin(board);
     if (winningPlayer || isBoardFull(board)) {
       onGameEnd(winningPlayer);
     }
