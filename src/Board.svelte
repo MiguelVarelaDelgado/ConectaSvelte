@@ -81,15 +81,21 @@
 </style>
 
 <div class="container">
-  <div class="placeholder" style="left: {$placeholderPosition}px"><Slot value={player} /></div>
-  <div class="board"	bind:this={boardNode}
-  on:mousemove={handleMousemove} on:click={(event) => {
-                onPlay(playingIndex);
-              }}>
-    {#each board as row, rowIndex}
-      {#each row as value, colIndex}
+  <div class="placeholder" style="left: {$placeholderPosition}px">
+    <Slot value={player} />
+  </div>
+  <div
+    class="board"
+    bind:this={boardNode}
+    on:mousemove={handleMousemove}
+    on:click={() => {
+      onPlay(playingIndex);
+    }}
+  >
+    {#each board as row}
+      {#each row as value}
         <div class="board-slot">
-          <Slot value={value} />
+          <Slot {value} />
         </div>
       {/each}
     {/each}
